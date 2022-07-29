@@ -5,12 +5,12 @@ textInput.addEventListener("blur", (event) => {
     textInput.classList.add("valid");
     textInput.classList.remove("invalid");
   } else {
-    switchClass();
+    switchClass("valid", "invalid");
     console.log(switchClass);
   }
 
-  function switchClass(valid, invalid) {
-    textInput.classList.add("invalid");
-    textInput.classList.remove("valid");
+  function switchClass(addValid, addInvalid) {
+    textInput.classList.add(addInvalid);
+    textInput.classList.remove(addValid);
   }
 });
